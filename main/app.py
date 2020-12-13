@@ -15,5 +15,5 @@ CONFIG_METHOD = "main.config.{}".format(os.environ.get("APP_SETTINGS", "Develop"
 
 app.config.from_object(CONFIG_METHOD)
 
-
 rpc = FlaskPooledClusterRpcProxy()
+rpc.init_app(app)

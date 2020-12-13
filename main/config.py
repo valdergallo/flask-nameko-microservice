@@ -7,7 +7,7 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_ECHO = False
     SQLALCHEMY_DATABASE_URI = "sqlite:///db.sqlite"
-    NAMEKO_AMQP_URI = "amqp://localhost"
+    NAMEKO_AMQP_URI = "amqp://guest:guest@localhost:5672"
 
 
 class Develop(Config):
