@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
 from flask_restx import Resource
-from .models import Inventory
 from .controllers import InventoryController
 from flask import request
-from flask import jsonify
 
 
 class InventoryResource(Resource):
@@ -22,3 +20,11 @@ class InventoryResource(Resource):
         return self.controller.update_by_code(
             update_by_code=inventory_code, **json_input
         )
+
+
+# XXX: Calling rpc service
+# @app.route('/request_rpc'):
+# def index():
+#     from main.app import rpc
+#     result = rpc.service.do_something('test')
+#     return result
